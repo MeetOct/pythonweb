@@ -9,7 +9,7 @@ def create_pool(loop, **kw):
     __pool = yield from aiomysql.create_pool(
         host=kw.get('host', '127.0.0.1'),
         port=kw.get('port', 3306),
-        user=kw.get('port', 'root'),
+        user=kw.get('user', 'root'),
         password=kw.get('password', 'jk544944951'),
         db=kw.get('database', 'awesome'),
         charset=kw.get('charset', 'utf8'),
